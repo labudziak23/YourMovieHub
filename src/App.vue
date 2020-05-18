@@ -153,53 +153,6 @@
         <div class="mx-2"></div>
         <v-btn depressed large class="light-blue white--text btn btn-outline-primary mr-1  hidden-sm-and-down" text v-if="isAuthenticated" @click="onLogOut()">Wyloguj się</v-btn>
 
-
-
-        <v-dialog dark v-model="signUpSmallMenu" max-width="600px" @save.prevent="onSignup">
-          <v-card>
-            <v-card-actions>
-              <v-row>
-                <v-btn depressed large class="light-blue white--text btn btn-outline-primary mr-1"
-                       text
-                       v-on="on"
-                       @click="signUpDialog = true"
-                       v-if="!isAuthenticated">
-                  Zarejestruj się
-                </v-btn>
-                <v-spacer></v-spacer>
-                <v-btn depressed large class="light-blue white--text btn btn-outline-primary mr-1"
-                       text v-on="on"
-                       @click="logInDialog = true"
-                       v-if="!isAuthenticated">
-                  Zaloguj się
-                </v-btn>
-                <v-btn depressed large class="light-blue white--text btn btn-outline-primary mr-5" v-if="isAuthenticated" v-on:click="searchOnlyMovies">FILMY</v-btn>
-
-                <v-btn depressed large class="light-blue white--text btn btn-outline-primary mr-5" v-if="isAuthenticated" v-on:click="searchSerials">SERIALE</v-btn>
-
-                <v-btn depressed large class="light-blue white--text btn btn-outline-primary mr-5" v-if="isAuthenticated" v-on:click="loadRandom">POLECANE</v-btn>
-
-                <v-btn depressed large  class="light-blue white--text btn btn-outline-primary mr-5" v-if="isAuthenticated" v-on:click="loadStayHome">#ZOSTAŃ W DOMU</v-btn>
-
-                <v-btn depressed large class="light-blue white--text btn btn-outline-primary mr-10" text  @click="onLogOut()" v-if="isAuthenticated">Wyloguj się</v-btn>
-              </v-row>
-            </v-card-actions>
-          </v-card>
-
-        </v-dialog>
-        <v-dialog dark v-model="searchSmallMenu" max-width="600px" @save.prevent="onSignup">
-          <v-card>
-            <v-card-actions>
-              <v-row>
-                <input class="white--text" type="text" v-model="searchKey" placeholder="Wyszukaj film,serial" v-if="isAuthenticated"/>
-                <v-btn depressed large  class="light-blue " v-on:click="searchMovies" v-if="isAuthenticated">Szukaj</v-btn>
-              </v-row>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
-
-
-
       </v-toolbar>
       <body style="background-color: #010105;">
 
